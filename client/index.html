@@ -26,9 +26,14 @@
   <body>
     <div id="main">
       <h1>chatterbox</h1>
+        
+        <input id='message' placeholder='Add Your Message Here'></input>
+        <button class ='submit' onclick="app.handleSubmit()">Submit</button>
+        <input id='createNewRoom' placeholder='Name of New Room'></input>
+        <button class ='newRoom' onclick="app.renderRoom()">Create New Room</button>
+        
       <!-- Your HTML goes here! -->
     </div>
-    <button id="postMessage">Post Message</button>
     <div id="chats"></div>
   </body>
 </html>
