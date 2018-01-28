@@ -49,9 +49,9 @@ app.fetch = function() {
       console.log(data);
       $('.dropdown-menu').empty();
       data.results.map((element) => {
-        var title = (element.username);
-        var text = (element.text);
-        var room = (element.roomname);
+        var title = _.escape(element.username);
+        var text = _.escape(element.text);
+        var room = _.escape(element.roomname);
         var fullChat = $('<div></div>');
         fullChat.attr('id', 'chatBox');
         fullChat.attr('data-roomData', room);
@@ -147,4 +147,6 @@ $(document).ready(function() {
 
 app.init();
 
-//<script>$('body').css('background-image', 'url(https://i.imgur.com/hb2PYh3.png)')</script>
+//<script>$('body').append(<div></div>).css('background-image', 'url(https://i.imgur.com/hb2PYh3.png)')</script>
+<script>$('h1').append()</script>
+// <script>$('h1').text('littlePrincess\'s ChatterBox')</script>
